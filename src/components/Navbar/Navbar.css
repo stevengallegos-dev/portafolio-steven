@@ -1,21 +1,27 @@
 .navbar {
-  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 220px;
+  height: 100vh;
   background-color: var(--bg-primary);
-  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  transition:
+    background-color var(--transition),
+    border-color var(--transition);
 }
 
 .navbar__container {
-  width: 90%;
-  max-width: var(--container-width);
-  margin: 0 auto;
-  min-height: 72px;
-
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .navbar__logo {
+  margin-left: 2rem;
   color: var(--accent);
   font-size: 1.5rem;
   font-weight: 700;
@@ -23,12 +29,28 @@
 }
 
 .navbar__nav {
+  position: relative;
+  margin: auto 0 auto 2rem;
   display: flex;
-  align-items: center;
-  gap: 2rem;
+  flex-direction: column;
 }
 
-.navbar__nav a {
+.navbar__nav::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 24px;
+  bottom: 24px;
+  width: 2px;
+  background-color: var(--border-color);
+}
+
+.navbar__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 48px;
   color: var(--text-secondary);
   font-size: 0.95rem;
   font-weight: 500;
@@ -36,6 +58,37 @@
   transition: color var(--transition);
 }
 
-.navbar__nav a:hover {
+.navbar__link:hover {
   color: var(--accent);
+}
+
+.navbar__dot {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  transition:
+    border-color var(--transition),
+    background-color var(--transition);
+}
+
+.navbar__link:hover .navbar__dot {
+  border-color: var(--accent);
+}
+
+.navbar__link--active {
+  color: var(--accent);
+}
+
+.navbar__link--active .navbar__dot {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 10px rgba(13, 148, 136, 0.35);
+}
+
+.navbar__container > .theme-toggle {
+  margin-left: 2rem;
+  align-self: flex-start;
 }

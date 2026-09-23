@@ -1,0 +1,33 @@
+.theme-toggle {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-card);
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(13, 148, 136, 0.25);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0);
+}
