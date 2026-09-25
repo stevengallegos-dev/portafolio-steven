@@ -1,4 +1,3 @@
-import ThemeToggle from '../ThemeToggle/ThemeToggle'
 import './Navbar.css'
 
 function Navbar() {
@@ -36,7 +35,6 @@ function Navbar() {
           </a>
         </nav>
 
-        <ThemeToggle />
       </div>
     </aside>
   )

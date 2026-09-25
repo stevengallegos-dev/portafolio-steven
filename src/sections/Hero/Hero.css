@@ -1,5 +1,5 @@
 .hero {
-  min-height: calc(100vh - 72px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -120,4 +120,29 @@
   background-color: var(--accent);
   color: #ffffff;
   transform: translateY(-2px);
+}
+
+@media (max-width: 1400px) {
+  .hero__container {
+    width: 82%;
+    gap: 2rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+  }
+
+  .hero__subtitle {
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+  }
+
+  .hero__image {
+    width: 330px;
+    height: 390px;
+  }
+
+  .hero__image::before {
+    width: 290px;
+    height: 290px;
+  }
 }

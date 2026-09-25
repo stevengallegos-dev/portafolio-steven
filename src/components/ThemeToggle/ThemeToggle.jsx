@@ -1,21 +1,20 @@
-import { useEffect, useState } from 'react'
-import './ThemeToggle.css'
+import { useEffect, useState } from "react";
+import { FaSun, FaMoon } from "react-icons/fa";
+import "./ThemeToggle.css";
 
 function ThemeToggle() {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'light'
-  })
+    return localStorage.getItem("theme") || "light";
+  });
 
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('theme', theme)
-  }, [theme])
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((currentTheme) =>
-      currentTheme === 'light' ? 'dark' : 'light'
-    )
-  }
+    setTheme((currentTheme) => (currentTheme === "light" ? "dark" : "light"));
+  };
 
   return (
     <button
@@ -23,11 +22,12 @@ function ThemeToggle() {
       type="button"
       onClick={toggleTheme}
       aria-label="Cambiar tema"
-      title="Cambiar tema"
     >
-      {theme === 'light' ? '🌙' : '☀️'}
+      {theme === "light" ? <FaMoon /> : <FaSun />}
+
+      <span className="theme-toggle__tooltip">Cambiar tema</span>
     </button>
-  )
+  );
 }
 
-export default ThemeToggle
+export default ThemeToggle;

@@ -1,0 +1,120 @@
+.skills {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.skills__container {
+  width: 72%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.skills__label {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.skills__title {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.skills__highlight {
+  color: var(--accent);
+}
+
+.skills__description {
+  max-width: 750px;
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.skills__groups {
+  margin-top: 2.5rem;
+}
+
+.skills__group-title {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.skills__icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skills__item {
+  position: relative;
+
+  width: 64px;
+  height: 64px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+
+  font-size: 2rem;
+
+  cursor: default;
+
+  transition:
+    color var(--transition),
+    border-color var(--transition),
+    background-color var(--transition),
+    transform var(--transition);
+}
+
+.skills__item:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background-color: var(--bg-card);
+  transform: translateY(-3px);
+}
+
+.skills__tooltip {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translate(-50%, -4px);
+
+  padding: 0.4rem 0.65rem;
+
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+}
+
+.skills__item:hover .skills__tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}

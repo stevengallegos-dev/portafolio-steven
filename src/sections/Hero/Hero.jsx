@@ -20,7 +20,11 @@ function Hero() {
               Ver proyectos
             </a>
 
-            <a className="hero__button hero__button--secondary" href="#">
+            <a
+              className="hero__button hero__button--secondary"
+              href="/CV-Steven-Gallegos-2026.pdf"
+              download
+            >
               Descargar CV
             </a>
           </div>

@@ -1,0 +1,43 @@
+.about {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.about__container {
+  width: 72%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+.about__label {
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.about__title {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.about__highlight {
+  color: var(--accent);
+}
+
+.about__content {
+  max-width: 750px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.about__description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
