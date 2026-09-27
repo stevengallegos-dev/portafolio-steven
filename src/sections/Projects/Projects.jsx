@@ -11,6 +11,11 @@ import peliculasDirectores02 from "../../assets/projects/peliculas-directores-02
 import peliculasDirectores03 from "../../assets/projects/peliculas-directores-03-detalle-director.png";
 import peliculasDirectores04 from "../../assets/projects/peliculas-directores-04-detalle-pelicula.png";
 
+import githubClientAndroid01 from "../../assets/projects/github-client-android-01-login.png";
+import githubClientAndroid02 from "../../assets/projects/github-client-android-02-repositorios.png";
+import githubClientAndroid03 from "../../assets/projects/github-client-android-03-crear.png";
+import githubClientAndroid04 from "../../assets/projects/github-client-android-04-editar.png";
+
 /* IMÁGENES - CAPACITACIONES UISEK */
 
 const capacitacionesImages = [
@@ -28,11 +33,21 @@ const peliculasImages = [
   peliculasDirectores04,
 ];
 
+/* IMÁGENES - GITHUB CLIENT ANDROID */
+
+const githubClientImages = [
+  githubClientAndroid01,
+  githubClientAndroid02,
+  githubClientAndroid03,
+  githubClientAndroid04,
+];
+
 function Projects() {
   /* ESTADO DE LOS CARRUSELES */
 
   const [capacitacionesImage, setCapacitacionesImage] = useState(0);
   const [peliculasImage, setPeliculasImage] = useState(0);
+  const [githubClientImage, setGithubClientImage] = useState(0);
 
   /* ESTADO DEL VISOR DE IMÁGENES */
 
@@ -42,13 +57,13 @@ function Projects() {
 
   const previousCapacitacionesImage = () => {
     setCapacitacionesImage((current) =>
-      current === 0 ? capacitacionesImages.length - 1 : current - 1
+      current === 0 ? capacitacionesImages.length - 1 : current - 1,
     );
   };
 
   const nextCapacitacionesImage = () => {
     setCapacitacionesImage((current) =>
-      current === capacitacionesImages.length - 1 ? 0 : current + 1
+      current === capacitacionesImages.length - 1 ? 0 : current + 1,
     );
   };
 
@@ -56,13 +71,27 @@ function Projects() {
 
   const previousPeliculasImage = () => {
     setPeliculasImage((current) =>
-      current === 0 ? peliculasImages.length - 1 : current - 1
+      current === 0 ? peliculasImages.length - 1 : current - 1,
     );
   };
 
   const nextPeliculasImage = () => {
     setPeliculasImage((current) =>
-      current === peliculasImages.length - 1 ? 0 : current + 1
+      current === peliculasImages.length - 1 ? 0 : current + 1,
+    );
+  };
+
+  /* CARRUSEL GITHUB CLIENT ANDROID */
+
+  const previousGithubClientImage = () => {
+    setGithubClientImage((current) =>
+      current === 0 ? githubClientImages.length - 1 : current - 1,
+    );
+  };
+
+  const nextGithubClientImage = () => {
+    setGithubClientImage((current) =>
+      current === githubClientImages.length - 1 ? 0 : current + 1,
     );
   };
 
@@ -160,7 +189,6 @@ function Projects() {
           </p>
 
           <div className="projects__grid">
-
             {/* ========================================
                 PROYECTO 1 - CAPACITACIONES UISEK
             ======================================== */}
@@ -180,10 +208,7 @@ function Projects() {
                   className="project-card__zoom"
                   type="button"
                   onClick={() =>
-                    openLightbox(
-                      capacitacionesImages,
-                      capacitacionesImage
-                    )
+                    openLightbox(capacitacionesImages, capacitacionesImage)
                   }
                   aria-label="Ampliar captura de Capacitaciones UISEK"
                 >
@@ -230,9 +255,7 @@ function Projects() {
                 </div>
 
                 <div className="project-card__tech-section">
-                  <p className="project-card__tech-label">
-                    Tecnologías:
-                  </p>
+                  <p className="project-card__tech-label">Tecnologías:</p>
 
                   <div className="project-card__technologies">
                     <span>HTML5</span>
@@ -289,9 +312,7 @@ function Projects() {
                 <button
                   className="project-card__zoom"
                   type="button"
-                  onClick={() =>
-                    openLightbox(peliculasImages, peliculasImage)
-                  }
+                  onClick={() => openLightbox(peliculasImages, peliculasImage)}
                   aria-label="Ampliar captura de Películas y Directores"
                 >
                   <FaSearchPlus />
@@ -327,9 +348,7 @@ function Projects() {
               </div>
 
               <div className="project-card__content">
-                <h3 className="project-card__title">
-                  Películas y Directores
-                </h3>
+                <h3 className="project-card__title">Películas y Directores</h3>
 
                 <div className="project-card__status">
                   <span>Estado:</span>
@@ -337,9 +356,7 @@ function Projects() {
                 </div>
 
                 <div className="project-card__tech-section">
-                  <p className="project-card__tech-label">
-                    Tecnologías:
-                  </p>
+                  <p className="project-card__tech-label">Tecnologías:</p>
 
                   <div className="project-card__technologies">
                     <span>React</span>
@@ -355,9 +372,9 @@ function Projects() {
                 <p className="project-card__description">
                   Aplicación Full Stack desarrollada para centralizar la gestión
                   de películas y directores mediante una interfaz web conectada
-                  a una API REST. Permite consultar, registrar, editar y eliminar
-                  información, relacionar cada película con su director y
-                  controlar el acceso a las operaciones mediante autenticación
+                  a una API REST. Permite consultar, registrar, editar y
+                  eliminar información, relacionar cada película con su director
+                  y controlar el acceso a las operaciones mediante autenticación
                   OAuth 2.0.
                 </p>
 
@@ -381,6 +398,101 @@ function Projects() {
               </div>
             </article>
 
+            {/* ========================================
+    PROYECTO 3 - GITHUB CLIENT ANDROID
+======================================== */}
+
+            <article className="project-card">
+              <div className="project-card__image">
+                <img
+                  src={githubClientImages[githubClientImage]}
+                  alt={`GitHub Client Android - captura ${
+                    githubClientImage + 1
+                  }`}
+                />
+
+                {/* LUPA */}
+
+                <button
+                  className="project-card__zoom"
+                  type="button"
+                  onClick={() =>
+                    openLightbox(githubClientImages, githubClientImage)
+                  }
+                  aria-label="Ampliar captura de GitHub Client Android"
+                >
+                  <FaSearchPlus />
+                </button>
+
+                {/* FLECHA IZQUIERDA */}
+
+                <button
+                  className="project-card__arrow project-card__arrow--left"
+                  type="button"
+                  onClick={previousGithubClientImage}
+                  aria-label="Ver captura anterior de GitHub Client Android"
+                >
+                  ‹
+                </button>
+
+                {/* FLECHA DERECHA */}
+
+                <button
+                  className="project-card__arrow project-card__arrow--right"
+                  type="button"
+                  onClick={nextGithubClientImage}
+                  aria-label="Ver siguiente captura de GitHub Client Android"
+                >
+                  ›
+                </button>
+
+                {/* CONTADOR DEL CARRUSEL PEQUEÑO */}
+
+                <div className="project-card__counter">
+                  {githubClientImage + 1} / {githubClientImages.length}
+                </div>
+              </div>
+
+              <div className="project-card__content">
+                <h3 className="project-card__title">GitHub Client Android</h3>
+
+                <div className="project-card__status">
+                  <span>Estado:</span>
+                  <strong>Funcional</strong>
+                </div>
+
+                <div className="project-card__tech-section">
+                  <p className="project-card__tech-label">Tecnologías:</p>
+
+                  <div className="project-card__technologies">
+                    <span>Kotlin</span>
+                    <span>Jetpack Compose</span>
+                    <span>Material Design 3</span>
+                    <span>Retrofit</span>
+                    <span>GitHub REST API</span>
+                  </div>
+                </div>
+
+                <p className="project-card__description">
+                  Aplicación Android desarrollada como proyecto académico a
+                  partir de una base proporcionada por el docente y
+                  posteriormente ampliada para consumir la API REST de GitHub.
+                  Permite autenticarse mediante token, consultar repositorios y
+                  realizar operaciones de creación, edición y eliminación desde
+                  una interfaz desarrollada con Jetpack Compose.
+                </p>
+
+                <div className="project-card__actions">
+                  <a
+                    href="https://github.com/stevengallegos-dev/github-client-android"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -390,10 +502,7 @@ function Projects() {
       ======================================== */}
 
       {lightbox && (
-        <div
-          className="project-lightbox"
-          onClick={closeLightbox}
-        >
+        <div className="project-lightbox" onClick={closeLightbox}>
           {/* BOTÓN CERRAR */}
 
           <button
