@@ -1,4 +1,4 @@
-import Steven from "../../assets/steven.png";
+import Steven from "../../assets/Steven.png";
 import "./Hero.css";
 
 function Hero() {
@@ -15,14 +15,18 @@ function Hero() {
           <h2 className="hero__subtitle">
             Desarrollador Full Stack | Estudiante de Ingeniería de Software
           </h2>
+
           <div className="hero__actions">
-            <a className="hero__button hero__button--primary" href="#proyectos">
+            <a
+              className="hero__button hero__button--primary"
+              href="#proyectos"
+            >
               Ver proyectos
             </a>
 
             <a
               className="hero__button hero__button--secondary"
-              href="/CV-Steven-Gallegos-2026.pdf"
+              href={`${import.meta.env.BASE_URL}CV-Steven-Gallegos-2026.pdf`}
               download
             >
               Descargar CV

@@ -1,0 +1,244 @@
+.contact {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 48px;
+}
+
+.contact__container {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact__title {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.contact__title span {
+  color: var(--accent);
+}
+
+.contact__description {
+  max-width: 650px;
+  margin: 24px auto 0;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   TARJETA
+   ========================= */
+
+.contact__card {
+  width: 100%;
+  max-width: 620px;
+  margin: 42px auto 0;
+  padding: 36px 32px;
+  box-sizing: border-box;
+
+  background-color: var(--bg-card);
+
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+
+  box-shadow: var(--shadow-card);
+
+  transition:
+    border-color var(--transition),
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.contact__card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+}
+
+/* =========================
+   ENCABEZADO DE LA TARJETA
+   ========================= */
+
+.contact__main-icon {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.contact__card h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.contact__card-description {
+  margin: 12px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* =========================
+   MÉTODOS DE CONTACTO
+   ========================= */
+
+.contact__methods {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.contact__method {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-width: 145px;
+  padding: 11px 18px;
+
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+
+  background: transparent;
+  color: var(--text-primary);
+
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color var(--transition),
+    border-color var(--transition),
+    color var(--transition),
+    transform var(--transition);
+}
+
+.contact__method svg {
+  font-size: 1.1rem;
+}
+
+.contact__method:hover {
+  background-color: var(--accent);
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CORREO COPIADO
+   ========================= */
+
+.contact__method--copied,
+.contact__method--copied:hover {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   UBICACIÓN
+   ========================= */
+
+.contact__location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  margin-top: 30px;
+  padding-top: 22px;
+
+  border-top: 1px solid var(--border-color);
+}
+
+.contact__location-icon {
+  color: var(--accent);
+  font-size: 1.15rem;
+}
+
+.contact__location p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* =========================
+   TABLETS GRANDES
+   ========================= */
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .contact {
+    min-height: auto;
+    padding: 90px 0;
+  }
+
+  .contact__container {
+    width: 78%;
+  }
+}
+
+/* =========================
+   RESPONSIVE - MÓVIL
+   ========================= */
+
+@media (max-width: 768px) {
+  .contact {
+    min-height: auto;
+    padding: 80px 0;
+  }
+
+  .contact__container {
+    width: 88%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .contact__title {
+    font-size: 2.4rem;
+  }
+
+  .contact__description {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .contact__card {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 34px;
+    padding: 30px 20px;
+  }
+
+  .contact__methods {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact__method {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .contact__location {
+    width: 100%;
+  }
+}

@@ -10,14 +10,18 @@
 }
 
 .social-links__item {
+  position: relative;
+
   width: 48px;
   height: 48px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
   background-color: var(--bg-secondary);
   color: var(--text-secondary);
+
   border: 1px solid var(--border-color);
   border-radius: 50%;
 
@@ -39,20 +43,18 @@
   transform: translateY(-2px);
 }
 
-.social-links__item {
-  position: relative;
-}
-
 .social-links__tooltip {
   position: absolute;
   top: calc(100% + 10px);
   left: 50%;
+
   transform: translate(-50%, -4px);
 
   padding: 0.4rem 0.65rem;
 
   background-color: var(--bg-card);
   color: var(--text-primary);
+
   border: 1px solid var(--border-color);
   border-radius: 6px;
 
@@ -73,4 +75,30 @@
   opacity: 1;
   visibility: visible;
   transform: translate(-50%, 0);
+}
+
+/* =========================
+   RESPONSIVE - MÓVIL
+   ========================= */
+
+@media (max-width: 768px) {
+  .social-links {
+    top: 11px;
+    right: 112px;
+
+    gap: 8px;
+
+    z-index: 1100;
+  }
+
+  .social-links__item {
+    width: 40px;
+    height: 40px;
+
+    font-size: 1.05rem;
+  }
+
+  .social-links__tooltip {
+    display: none;
+  }
 }

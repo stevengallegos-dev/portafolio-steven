@@ -1,3 +1,16 @@
 main {
   margin-left: 220px;
+  width: calc(100% - 220px);
+  box-sizing: border-box;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
 }

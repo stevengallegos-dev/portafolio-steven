@@ -92,3 +92,107 @@
   margin-left: 2rem;
   align-self: flex-start;
 }
+
+/* Botón móvil oculto en computadora */
+.navbar__menu-button {
+  display: none;
+}
+
+/* =========================
+   RESPONSIVE - MÓVIL
+   ========================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    height: 64px;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .navbar__container {
+    position: relative;
+    height: 64px;
+    padding: 0 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar__logo {
+    margin-left: 0;
+  }
+
+  /* Botón hamburguesa */
+  .navbar__menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+
+    font-size: 1.25rem;
+    cursor: pointer;
+
+    transition:
+      color var(--transition),
+      border-color var(--transition),
+      background-color var(--transition);
+  }
+
+  .navbar__menu-button:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* Menú cerrado */
+  .navbar__nav {
+    display: none;
+  }
+
+  /* Menú abierto */
+  .navbar--open .navbar__nav {
+    position: absolute;
+
+    top: 64px;
+    left: 0;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 18px 24px 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--bg-primary);
+    border-bottom: 1px solid var(--border-color);
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  }
+
+  .navbar--open .navbar__nav::before {
+    left: 28px;
+    top: 42px;
+    bottom: 42px;
+  }
+
+  .navbar--open .navbar__link {
+    min-height: 48px;
+    gap: 16px;
+  }
+
+  .navbar--open .navbar__dot {
+    position: relative;
+    z-index: 1;
+  }
+}
