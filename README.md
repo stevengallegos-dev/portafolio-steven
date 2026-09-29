@@ -76,7 +76,7 @@ npm run build
 
 El portafolio será publicado mediante **GitHub Pages**.
 
-> El enlace público se añadirá aquí después del despliegue.
+🔗 **Portafolio:** https://stevengallegos-dev.github.io/portafolio-steven/
 
 ## 👤 Autor
 
