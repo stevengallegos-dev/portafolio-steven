@@ -1,16 +1,93 @@
-# React + Vite
+# 💻 Portafolio Personal — Steven Gallegos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portafolio web personal desarrollado para presentar mi perfil como estudiante de Ingeniería de Software, mis habilidades técnicas y algunos de los proyectos que he desarrollado durante mi formación académica.
 
-Currently, two official plugins are available:
+El sitio fue desarrollado con **React y Vite**, con un diseño responsive, modo oscuro/claro y una estructura basada en componentes reutilizables.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologías utilizadas
 
-## React Compiler
+- React
+- JavaScript
+- HTML5
+- CSS3
+- Vite
+- React Icons
+- Git
+- GitHub
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Características
 
-## Expanding the ESLint configuration
+- Diseño responsive para escritorio, tablet y dispositivos móviles.
+- Modo oscuro y modo claro.
+- Navegación por secciones.
+- Presentación de habilidades y tecnologías.
+- Galería de proyectos desarrollados.
+- Vista ampliada de capturas de los proyectos.
+- Enlaces a repositorios y proyectos publicados.
+- Descarga de CV.
+- Sección de contacto.
+- Enlaces a GitHub y LinkedIn.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Secciones
+
+El portafolio está organizado en:
+
+- **Inicio** — Presentación y perfil profesional.
+- **Sobre mí** — Breve descripción de mi formación y objetivos.
+- **Habilidades** — Tecnologías y herramientas con las que he trabajado.
+- **Proyectos** — Proyectos académicos y personales con descripción, tecnologías y enlaces.
+- **Contacto** — Medios para comunicarse conmigo.
+
+## 🛠️ Instalación local
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/stevengallegos-dev/portafolio-steven.git
+```
+
+Entrar al proyecto:
+
+```bash
+cd portafolio-steven
+```
+
+Instalar las dependencias:
+
+```bash
+npm install
+```
+
+Ejecutar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+## 📦 Build de producción
+
+Para generar la versión optimizada para producción:
+
+```bash
+npm run build
+```
+
+## 🌐 Demo
+
+El portafolio será publicado mediante **GitHub Pages**.
+
+> El enlace público se añadirá aquí después del despliegue.
+
+## 👤 Autor
+
+**Steven Gallegos**
+
+Estudiante de Ingeniería de Software  
+Desarrollador Full Stack
+
+- **GitHub:** stevengallegos-dev
+- **LinkedIn:** Steven Gallegos
+
+---
+
+Desarrollado como parte de mi crecimiento y formación en desarrollo de software.
